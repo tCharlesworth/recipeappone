@@ -1,0 +1,328 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+COMMAND: 
+sass --watch ionic.app.scss:../www/css/style.css
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+// @import "www/lib/ionic/scss/ionic/*";
+
+
+$accent-main: #008517;
+$accent-light: #00FD2C;
+$white-text: #fff;
+$custom-gray: #F5F5F5;
+$header-height: 50px;
+
+.bar {
+    height: $header-height;
+    border: none;
+}
+
+.home-bg-image {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.home-bg-color {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #3D3C3C;
+    opacity: 0.7;
+}
+
+.home-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+// .home-content {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+// }
+
+
+.bar.bar-stable {
+    background-color: $accent-main;
+    padding: 10px;
+}
+
+.bar.bar-stable h1 {
+    margin: auto;
+}
+
+.accent-background {
+    background-color: $accent-main;
+}
+
+.bar.bar-stable {
+    /*background-color: #3D3C3C;*/
+    background-color: $accent-main;
+    padding: 10px;
+}
+
+.bar.bar-stable .title {
+    color: $white-text;
+    display: inline-block;
+    width: 250px;
+    font-size: 38px;
+}
+
+.bar .title + .button:last-child {
+    background: none;
+    color: $white-text;
+}
+
+div.scroll.padding {
+    padding: 0;
+}
+
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.stretch {
+    clear: both;
+}
+
+.half {
+    width: 50%;
+}
+
+
+
+.recipe-small {
+    width: 90%;
+    border: thin solid lightgray;
+    margin: 7px auto;
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    box-shadow: 0 0 6px gray;
+}
+
+.recipe-small-background {
+    position: absolute;
+    z-index: 1;
+    width: 200%;
+    height: 400%;
+    top: -200%;
+    left: -50%;
+}
+
+.recipe-small-color {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #3D3C3C;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.recipe-small-content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    color: $white-text;
+}
+.recipe-small-content h2 {
+    color: $white-text;
+    text-align: center;
+}
+
+.recipe-small-content div {
+    text-align: center;
+}
+
+.recipe-medium {
+    width: 90%;
+    border: thin solid $accent-light;
+    margin: 7px auto;
+    box-shadow: 0 0 6px gray;
+    border-radius: 5px;
+}
+
+.recipe-medium h2 {
+    padding: 5px;
+    /*background-color: #3D3C3C;
+    color: #fff;*/
+}
+
+.recipe-medium img {
+    width: 100%;
+    height: 200px;
+}
+
+.recipe-medium-content {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.recipe-medium-content .right {
+    text-align: right;
+}
+
+.recipe-medium-content .right i {
+    padding: 2px 15px;
+}
+
+.recipe-medium-content .right i:hover {
+    cursor: pointer;
+    outline: thin solid lightgray;
+    background-color: ghostwhite;
+}
+
+.view-recipe-image {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    height: calc( 100vh - $header-height );
+    overflow: hidden;
+}
+
+.new-recipe-image {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    height: calc( 100vh - $header-height );
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+.view-recipe-color {
+    background-color: #3D3C3C;
+    opacity: 0.8;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 20%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.normal-spacer {
+    height: 70px;
+}
+
+.view-recipe-spacer {
+    height: 60vh;
+}
+
+.view-recipe-content {
+    background-color: rgba(61, 60, 60, 0.8);
+    width: 100vw;
+    padding: 10px;
+    margin-bottom: 0;
+    color: $white-text;
+    
+    h1 {
+        color: $white-text;
+    }
+    
+    h3 {
+        color: $white-text;
+    }
+    
+    hr { 
+        margin: 0 0 25px 0;
+        border: none;
+        height: 2px;
+        width: 80vw;
+        background: linear-gradient(to right, $accent-light, rgba(0,0,0,0));
+    }
+    
+    p {
+        margin-left: 20px;
+        
+        span {
+            font-size: 20px;
+            margin-right: 5px;
+            color: $accent-light;
+        }
+    }
+    
+    .half {
+        text-align: center;
+        
+        i {
+            color: $accent-light;
+        }
+    }
+}
+
+
+a {
+    color: $accent-main;
+}
+
+
+.recipe-form {
+    // background: lightyellow;
+    padding: 10px;
+    
+    input[type="text"] {
+        background: none;
+        border-bottom: thin solid lightgray;
+        width: 100%;
+    }
+    
+    input[type="number"] {
+        background: none;
+        border-bottom: thin solid lightgray;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.white-text {
+    color: $white-text;
+}
+
+.button.button-stable {
+    background-color: $custom-gray;
+    color: black;
+}
+
+.message-center {
+    margin: auto;
+    text-align: center; 
+}

@@ -1,0 +1,23 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Update</h1>
+    </ion-header-bar>
+    <ion-content>
+        <p class="message-center">{{loginError}}</p>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Email" ng-model="load.email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="load.password">
+            </label>
+        </div>
+        
+        <button ng-click="loadData()" class="button button-full button-positive">
+            Load
+        </button>
+        <button ng-click="hideLoginModal()" class="button button-full button-positive">
+            Cancel
+        </button>
+    </ion-content>
+</ion-modal-view>

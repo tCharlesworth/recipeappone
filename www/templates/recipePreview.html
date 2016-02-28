@@ -1,0 +1,25 @@
+<div class="recipe-small" ng-show='!showMe' ng-click='triggerFunction(idx)'>
+    <img ng-src="{{recipe.picture}}" alt="recipe" class="recipe-small-background">
+    <div class="recipe-small-color"></div>
+    <div class="recipe-small-content">
+        <h2>{{recipe.name}}</h2>
+        <div class="green">
+            {{recipe.prepTime + recipe.cookTime || 1}} min
+        </div>
+    </div>
+</div>
+<div class="recipe-medium" ng-show='showMe' ng-click='triggerFunction(idx)'>
+    <h2>{{recipe.name}}</h2>
+    <a ui-sref="ViewRecipe({recipeId: recipe._id})"><img ng-src="{{recipe.picture}}" alt="recipe picture"/></a>
+    <div class="recipe-medium-content">
+        <div class="left half">
+            <i class="ion-clock"></i>
+            {{recipe.prepTime + recipe.cookTime || 1}} min
+        </div>
+        <div class="right half">
+            <a ui-sref="ViewRecipe({recipeId: recipe._id})"><i class="ion-search"></i></a>
+            <a ng-click="deleteRecipe(recipe._id)"><i class="ion-trash-b"></i></a>
+        </div>
+        <div class="stretch"></div>
+    </div>
+</div>

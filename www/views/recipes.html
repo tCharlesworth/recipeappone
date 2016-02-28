@@ -1,0 +1,11 @@
+<ion-view title="Recipes">
+    <my-header title="Recipes"></my-header>
+    <ion-content padding="true">
+        <div class="normal-spacer"></div>
+        <div ng-show="recipes.length < 1">
+            <p class="message-center">No Recipes Saved</p>
+            <button class="button button-block button-stable" ui-sref="NewRecipe">Add A Recipe</button>
+        </div>
+        <recipe-preview ng-repeat="recipe in recipes track by $index" ng-click='changeSelected($index)' deleter="removeRecipe(recipeId)" adder='addFuncToList(newFunc)' recipe='recipe'></recipe-preview>
+    </ion-content>
+</ion-view>

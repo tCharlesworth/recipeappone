@@ -1,0 +1,14 @@
+<ion-view title="Home">
+    <my-header title='Kitchen Friend'></my-header>
+    <img src="img/background-image.jpg" alt="picture" class="home-bg-image">
+    <div class="home-bg-color"></div>
+    <ion-content padding="true">
+        <div class="home-wrapper">
+            <div class="home-content">
+                <button ng-click='openLoginModal()' class="button button-block button-stable">Login</button>
+                <!--<button class="button button-block button-stable">Login Facebook</button>-->
+                <button ng-show="showRegister" ng-click="openRegisterModal()" class="button button-block button-stable">Register</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

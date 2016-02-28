@@ -1,0 +1,31 @@
+<ion-view title="Recipes">
+    <my-header title="New Recipe"></my-header>
+    <img class="new-recipe-image" ng-src="{{newRecipe.picture}}" alt=""/>
+    <!--<div class="home-bg-color" ng-show="hasPicture"></div>-->
+    <ion-content padding="true">
+        <div class="normal-spacer"></div>
+        <form class="recipe-form">
+            <input type="text" placeholder="Name" ng-model="newRecipe.name"/>
+            <input type="text" placeholder="Description" ng-model="newRecipe.description"/>
+            <input type="text" placeholder="Image" ng-model="newRecipe.picture"/>
+            <div class="half left">
+                Prep Time: <input type="number" ng-model="newRecipe.prepTime"/>
+            </div>
+            <div class="half right">
+                Cook Time: <input type="number" ng-model="newRecipe.cookTime"/>
+            </div>
+            <div class="stretch"></div>
+            <h3>Ingredients</h3>
+            <hr/>
+            <input type="text" placeholder="New Ingredient" ng-repeat="ingredient in newRecipe.ingredients track by $index" ng-model="newRecipe.ingredients[$index]"/>
+            <button class="button button-block button-stable" placeholder="New Ingredient" ng-click="newRecipe.ingredients.push('')">Add Ingredient</button>
+            <h3>Directions</h3>
+            <hr/>
+            <input type="text" placeholder="New Direction" ng-repeat="direction in newRecipe.directions track by $index" ng-model="newRecipe.directions[$index]"/>
+            <button class="button button-block button-stable" ng-click="newRecipe.directions.push('')">Add Direction</button>
+            <hr/>
+            <button class="button button-block button-stable" ng-click="saveRecipe(newRecipe)">Save</button>
+            <button class="button button-block button-stable" ng-click="cancelRecipe()">Cancel</button>
+        </form>
+    </ion-content>
+</ion-view>
